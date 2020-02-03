@@ -13,6 +13,15 @@ exports.seed = function(knex) {
         daily_rate: 20,
         condition: "Great",
         location: 'LA'
+      },
+      { id: 2, 
+        item_name:'XXL Megaphone', 
+        description:'Obnoxiously loud ',
+        user_id: 1,
+        availability: true,
+        daily_rate: 15,
+        condition: "It works",
+        location: 'LA'
       }
       ]);
     });
