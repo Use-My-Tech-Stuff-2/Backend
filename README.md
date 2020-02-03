@@ -25,7 +25,7 @@ Expects an object with this format as the request body:
 Post 
 ### https://usetechstuff.herokuapp.com/api/Login
 
-Expects an object with this correct creditials stored in the APi:
+Expects an object with this correct credentials stored in the APi:
 
 ```
 {
