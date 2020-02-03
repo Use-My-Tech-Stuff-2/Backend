@@ -37,6 +37,8 @@ Expects an object with this correct credentials stored in the APi:
 
 ## All Items
 
+### Authorization needed, 'token'
+
 
 # Get
 ## https://usetechstuff.herokuapp.com/api/items
@@ -59,3 +61,17 @@ Will return all items in the database and their information, looking something l
 
 
 ```
+
+
+
+## Single Item
+
+### Authorization needed, 'token'
+
+
+# Get
+## https://usetechstuff.herokuapp.com/api/item/:id
+ 
+ Note-':id' will be replaced by items id number
+
+Will return a single item based off of provided id 

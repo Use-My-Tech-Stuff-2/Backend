@@ -5,7 +5,8 @@ module.exports = {
   find,
   findBy,
   findById,
-  allItems
+  allItems,
+  findItemById
 };
 
 function find() {
@@ -31,4 +32,10 @@ function findById(id) {
 function allItems(id){
   return db('items')
 
+}
+
+function findItemById(id){
+  return db('items')
+  .where({id})
+  .first();
 }
