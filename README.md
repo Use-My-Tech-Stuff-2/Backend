@@ -3,6 +3,45 @@
 Documentation
 ### https://usetechstuff.herokuapp.com/
 
+
+
+## Dummy data
+
+### Users
+```
+[
+  {id: 1, username: 'Jay', password:'123', department:'owner'},
+  {id: 2, username: 'db', password:'123', department:'owner'}
+
+]
+
+```
+
+### Items
+
+```
+[
+      { id: 1, 
+        item_name:'Roomba', 
+        description:'Does the cleaning for you',
+        user_id: 2,
+        availability: true,
+        daily_rate: 20,
+        condition: "Great",
+        location: 'LA'
+      },
+      { id: 2, 
+        item_name:'XXL Megaphone', 
+        description:'Obnoxiously loud ',
+        user_id: 1,
+        availability: true,
+        daily_rate: 15,
+        condition: "It works",
+        location: 'LA'
+      }
+]
+```
+
 ## Register
 
 
