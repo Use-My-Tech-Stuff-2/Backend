@@ -1,7 +1,7 @@
 # Backend - Use my Tech
 
 Documentation
-`https://usetechstuff.herokuapp.com/`
+### https://usetechstuff.herokuapp.com/
 
 ## Register
 
@@ -23,7 +23,7 @@ Expects an object with this format as the request body:
 
 
 Post 
-### https://usetechstuff.herokuapp.com/api/Login
+### https://usetechstuff.herokuapp.com/api/login
 
 Expects an object with this correct credentials stored in the APi:
 
