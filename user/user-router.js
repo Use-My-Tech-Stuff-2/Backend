@@ -51,6 +51,18 @@ router.get('/users', restricted, (req, res) => {
 })
 })
 
+ router.get('/items', restricted, (req, res) => {
+  Users.allItems()
+  .then(item => {
+    res.json(item)
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json({ message: "failed to get items"})
+})
+ })
+
+
 function generateToken(user){
   const payload = {
     subject: user.id,
