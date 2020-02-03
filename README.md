@@ -1,12 +1,13 @@
 # Backend - Use my Tech
+
 Documentation
-https://usetechstuff.herokuapp.com/
+`https://usetechstuff.herokuapp.com/`
 
+## Register
 
-##Register
 
 Post 
-##https://usetechstuff.herokuapp.com/api/register
+### https://usetechstuff.herokuapp.com/api/register
 
 Expects an object with this format as the request body:
 
@@ -18,9 +19,11 @@ Expects an object with this format as the request body:
 }
 ```
 
-##Login
+## Login
+
+
 Post 
-##https://usetechstuff.herokuapp.com/api/Login
+### https://usetechstuff.herokuapp.com/api/Login
 
 Expects an object with this correct creditials stored in the APi:
 
