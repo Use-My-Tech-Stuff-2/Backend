@@ -26,10 +26,10 @@
     "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "knex": "^0.20.8",
-    "node-pre-gyp": "^0.14.0"
+    "node-pre-gyp": "^0.14.0",
+    "sqlite3": "^4.1.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2",
-    "sqlite3": "^4.1.1"
+    "nodemon": "^2.0.2"
   }
 }
