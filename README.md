@@ -3,11 +3,61 @@
 Documentation
 ### https://usetechstuff.herokuapp.com/
 
+Section Contents:
+
+- [Endpoints](#endpoints)
+- [Create new User](#Register)
+- [Login](#Login)
+- [Get all items in Database](#All-Items)
+- [Get item by ID](#Single-Item)
+- [Add Item](#Add-Item)
+- [Delete Item by ID from database](#Delete-Item)
+
+
+# Dummy data
+
+### Users
+```
+[
+  {id: 1, username: 'test', password:'123', department:'owner'},
+  {id: 2, username: 'db', password:'123', department:'owner'}
+
+]
+
+```
+
+### Items
+
+```
+[
+      { id: 1, 
+        item_name:'Roomba', 
+        description:'Does the cleaning for you',
+        user_id: 2,
+        availability: true,
+        daily_rate: 20,
+        condition: "Great",
+        location: 'LA'
+      },
+      { id: 2, 
+        item_name:'XXL Megaphone', 
+        description:'Obnoxiously loud ',
+        user_id: 1,
+        availability: true,
+        daily_rate: 15,
+        condition: "It works",
+        location: 'LA'
+      }
+]
+```
+
+# Endpoints
+
 ## Register
 
 
-# Post 
-### https://usetechstuff.herokuapp.com/api/register
+
+### /api/register POST
 
 Expects an object with this format as the request body:
 
@@ -22,8 +72,8 @@ Expects an object with this format as the request body:
 ## Login
 
 
-# Post 
-### https://usetechstuff.herokuapp.com/api/login
+ 
+### /api/login POST
 
 Expects an object with this correct credentials stored in the APi:
 
@@ -40,8 +90,8 @@ Expects an object with this correct credentials stored in the APi:
 ### Authorization needed, 'token'
 
 
-# Get
-## https://usetechstuff.herokuapp.com/api/items
+
+### /api/items GET
 
 Will return all items in the database and their information, looking something like this...
 
@@ -69,9 +119,42 @@ Will return all items in the database and their information, looking something l
 ### Authorization needed, 'token'
 
 
-# Get
-## https://usetechstuff.herokuapp.com/api/item/:id
+
+### /api/item/:id GET
  
  Note-':id' will be replaced by items id number
 
-Will return a single item based off of provided id 
+Will return a single item based off of provided id
+
+
+## Add item
+
+### Auth needed
+
+
+### /api/item POST
+
+Example of data needed:
+
+Will add an item to the database
+
+```
+        "item_name": "3D Printer", //string
+        "description": "it's 3D", //string
+        "user_id": 3, //integer
+        "availability": 1, //boolean
+        "daily_rate": 75, //integer
+        "condition": "Not a Scratch", //string
+        "location": "AZ" //string
+```
+
+## Delete item
+
+### Auth needed
+
+
+### /api/item/:id DELETE
+
+Note-':id' will be replaced by items id number
+
+Will delete the user from the database
