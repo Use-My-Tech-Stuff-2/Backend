@@ -5,6 +5,7 @@ Documentation
 
 Section Contents:
 
+- [Endpoints](#endpoints)
 - [/api/register POST](#apiregister-post)
 - [/api/login POST](#apilogin-post)
 - [/api/items GET](#apiitems-get)
@@ -12,7 +13,7 @@ Section Contents:
 
 
 
-## Dummy data
+# Dummy data
 
 ### Users
 ```
@@ -48,6 +49,8 @@ Section Contents:
       }
 ]
 ```
+
+# Endpoints
 
 ## Register
 
