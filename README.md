@@ -5,10 +5,10 @@ Documentation
 
 Section Contents:
 
--[/api/register](#apiregister-post)
--[/api/login](#apilogin-post)
--[/api/items](#apiitems-get)
--[/api/item/:id](#apiitemid-get)
+- [/api/register POST](#apiregister-post)
+- [/api/login POST](#apilogin-post)
+- [/api/items GET](#apiitems-get)
+- [/api/item/:id GET](#apiitemid-get)
 
 
 
