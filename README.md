@@ -69,7 +69,7 @@ Expects an object with this format as the request body:
 
 
  
-### https://usetechstuff.herokuapp.com/api/login POST
+### /api/login POST
 
 Expects an object with this correct credentials stored in the APi:
 
@@ -87,7 +87,7 @@ Expects an object with this correct credentials stored in the APi:
 
 
 
-### https://usetechstuff.herokuapp.com/api/items GET
+### /api/items GET
 
 Will return all items in the database and their information, looking something like this...
 
@@ -116,7 +116,7 @@ Will return all items in the database and their information, looking something l
 
 
 
-### https://usetechstuff.herokuapp.com/api/item/:id GET
+### /api/item/:id GET
  
  Note-':id' will be replaced by items id number
 
