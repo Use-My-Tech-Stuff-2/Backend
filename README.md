@@ -6,6 +6,9 @@ Documentation
 Section Contents:
 
 -[/api/register](#apiregister-post)
+-[/api/login](#apilogin-post)
+-[/api/items](#apiitems-get)
+-[/api/item/:id](#apiitemid-get)
 
 
 
@@ -65,8 +68,8 @@ Expects an object with this format as the request body:
 ## Login
 
 
-# Post 
-### https://usetechstuff.herokuapp.com/api/login
+ 
+### https://usetechstuff.herokuapp.com/api/login POST
 
 Expects an object with this correct credentials stored in the APi:
 
@@ -83,8 +86,8 @@ Expects an object with this correct credentials stored in the APi:
 ### Authorization needed, 'token'
 
 
-# Get
-## https://usetechstuff.herokuapp.com/api/items
+
+### https://usetechstuff.herokuapp.com/api/items GET
 
 Will return all items in the database and their information, looking something like this...
 
@@ -112,8 +115,8 @@ Will return all items in the database and their information, looking something l
 ### Authorization needed, 'token'
 
 
-# Get
-## https://usetechstuff.herokuapp.com/api/item/:id
+
+### https://usetechstuff.herokuapp.com/api/item/:id GET
  
  Note-':id' will be replaced by items id number
 
