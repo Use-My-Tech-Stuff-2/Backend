@@ -3,6 +3,10 @@
 Documentation
 ### https://usetechstuff.herokuapp.com/
 
+Section Contents:
+
+-[/api/register](#apiregister-post)
+
 
 
 ## Dummy data
@@ -45,8 +49,8 @@ Documentation
 ## Register
 
 
-# Post 
-### https://usetechstuff.herokuapp.com/api/register
+
+### /api/register POST
 
 Expects an object with this format as the request body:
 
