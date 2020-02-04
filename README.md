@@ -19,7 +19,7 @@ Section Contents:
 ### Users
 ```
 [
-  {id: 1, username: 'Jay', password:'123', department:'owner'},
+  {id: 1, username: 'test', password:'123', department:'owner'},
   {id: 2, username: 'db', password:'123', department:'owner'}
 
 ]
