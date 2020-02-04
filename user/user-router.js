@@ -16,6 +16,7 @@ router.post('/register', (req, res) => {
       res.status(201).json(saved);
     })
     .catch(error => {
+      console.log(error)
       res.status(500).json(error);
     });
 });
@@ -30,7 +31,7 @@ router.post('/login', (req, res) => {
 
         const token = generateToken(user); 
 
-        res.status(200).json({ token }); 
+        res.status(200).json({ token });
       } else {
         res.status(401).json({ message: 'Invalid Credentials' });
       }
@@ -47,9 +48,37 @@ router.get('/users', restricted, (req, res) => {
   })
   .catch(err => {
     console.log(err);
-    res.status(500).json({ message: "failed to get users"})
-})
-})
+    res.status(500).json({ message: "failed to get users"});
+  });
+});
+
+router.get('/users/:id/items', restricted, (req, res) => {
+  const id = req.params.id;
+  
+  Users.findUserItems(id)
+    .then(items => {
+      res.status(200).json(items);
+    })
+    .catch(err => {
+      console.log(err);
+      res.status(500).json({ error: "There was and error getting the items" });
+    });
+});
+
+router.post('/users/:id/items', (req, res) => {
+  const id = req.params.id;
+  console.log(req.params.id)
+
+  Users.addItemToUser(id, req.body)
+    .then(newItem => {
+      //console.log(newItem)
+      res.status(201).json(newItem)
+    })
+    .catch(err => {
+      console.log(err)
+      res.status(500).json({ error: "There was an error adding the item" });
+    });
+});
 
 
 

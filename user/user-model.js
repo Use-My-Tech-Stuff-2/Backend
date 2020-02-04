@@ -6,11 +6,13 @@ module.exports = {
   findBy,
   findById,
   allItems,
-  findItemById
+  findItemById,
+  findUserItems,
+  addItemToUser
 };
 
 function find() {
-  return db('users').select('id', 'username', 'password');
+  return db('users').select('id', 'username');
 }
 
 function findBy(filter) {
@@ -38,4 +40,25 @@ function findItemById(id){
   return db('items')
   .where({id})
   .first();
+}
+
+function findUserItems(userId) {
+  return db('items as i')
+    .join('users', function() {
+      this
+        .on('users.id', "=", "i.user_id")
+    })
+    .select('i.id', 'i.item_name', 'i.description', 'i.availability', 'i.daily_rate', 'i.condition', 'i.location')
+    .where('i.user_id', userId)
+}
+
+function addItemToUser(userId, payload){
+  return db('items as i')
+    .join('users', function() {
+      this
+        .on('users.id', "=", "i.user_id")
+    })
+    .insert(payload)
+    .select("*")
+    .where(userId, payload.user_id)
 }
