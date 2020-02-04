@@ -6,12 +6,12 @@ Documentation
 Section Contents:
 
 - [Endpoints](#endpoints)
-- [/api/register POST](#apiregister-post)
-- [/api/login POST](#apilogin-post)
-- [/api/items GET](#apiitems-get)
-- [/api/item/:id GET](#apiitemid-get)
-- [/api/item POST](#apiitem-Post)
-- [/api/item/:id DELETE](#apiitemid-Delete)
+- [Create new User](#Register)
+- [Login](#Login)
+- [Get all items in Database](#All-Items)
+- [Get item by ID](#Single-Item)
+- [Add Item](#Add-Item)
+- [Delete Item by ID from database](#Delete-Item)
 
 
 # Dummy data
