@@ -10,7 +10,8 @@ Section Contents:
 - [/api/login POST](#apilogin-post)
 - [/api/items GET](#apiitems-get)
 - [/api/item/:id GET](#apiitemid-get)
-
+- [/api/item POST](#apiitem-Post)
+- [/api/item/:id DELETE](#apiitemid-Delete)
 
 
 # Dummy data
@@ -123,4 +124,37 @@ Will return all items in the database and their information, looking something l
  
  Note-':id' will be replaced by items id number
 
-Will return a single item based off of provided id 
+Will return a single item based off of provided id
+
+
+## Add item
+
+### Auth needed
+
+
+### /api/item POST
+
+Example of data needed:
+
+Will add an item to the database
+
+```
+        "item_name": "3D Printer", //string
+        "description": "it's 3D", //string
+        "user_id": 3, //integer
+        "availability": 1, //boolean
+        "daily_rate": 75, //integer
+        "condition": "Not a Scratch", //string
+        "location": "AZ" //string
+```
+
+## Delete item
+
+### Auth needed
+
+
+### /api/item/:id DELETE
+
+Note-':id' will be replaced by items id number
+
+Will delete the user from the database

@@ -55,7 +55,7 @@ router.put('/item/:id', restricted, (req, res) => {
 router.delete('/item/:id', restricted, (req, res) => {
   Users.itemDelete(req.params.id)
   .then(() =>{
-    res.status(200).json({message: `Item with ${req} deleted`})
+    res.status(200).json({message: `Item with ID ${req.params.id} deleted`})
   })
   .catch(error => {
     res.status(500).json({ message: "Couldn't delete the item" })
