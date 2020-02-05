@@ -22,7 +22,7 @@ function addItem(payload){
 }
 
 
-function allItems(id){
+function allItems(){
   return db('items')
 
 }
