@@ -158,3 +158,19 @@ Will add an item to the database
 Note-':id' will be replaced by items id number
 
 Will delete the user from the database
+
+## Add item by Owner
+
+### Auth needed
+
+### /api/users/:id/items
+
+```
+        "item_name": "3D Printer", //string required
+        "description": "it's 3D", //string  required
+        "user_id": 3, //integer
+        "availability": 1, //boolean 
+        "daily_rate": 75, //integer
+        "condition": "Not a Scratch", //string required
+        "location": "AZ" //string required
+```

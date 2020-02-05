@@ -5,8 +5,7 @@ module.exports = {
     findItemById,
     updateItem,
     addItem,
-    itemDelete, 
-    itemByUser  
+    itemDelete 
 }
 
 function updateItem(id, changes) {
