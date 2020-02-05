@@ -5,7 +5,7 @@ module.exports = {
     findItemById,
     updateItem,
     addItem,
-    itemDelete  
+    itemDelete 
 }
 
 function updateItem(id, changes) {
@@ -36,3 +36,4 @@ function findItemById(id){
 function itemDelete(id){
   return findItemById(id).del(id);
 }
+

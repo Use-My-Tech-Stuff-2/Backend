@@ -158,3 +158,31 @@ Will add an item to the database
 Note-':id' will be replaced by items id number
 
 Will delete the user from the database
+
+## Add item by Owner
+
+### Auth needed
+
+### /api/users/:id/items POST
+
+Used to create an item, assigned to user_id
+
+Example of data that can be inputed:
+```
+        "item_name": "3D Printer", //string required
+        "description": "it's 3D", //string  required
+        "availability": 1, //boolean 
+        "daily_rate": 75, //integer
+        "condition": "Not a Scratch", //string required
+        "location": "AZ" //string required
+```
+
+## Get items by User
+
+### Auth needed
+
+### /api/users/:id/items GET
+
+Used to get all items assigned to specific owner
+
+
