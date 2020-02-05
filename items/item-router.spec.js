@@ -3,7 +3,7 @@ const server = require('../api/server');
 const db = require('../database/dbConfig');
 
 describe('Items Router', () => {
-  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjozLCJ1c2VybmFtZSI6InR5Z2UiLCJpYXQiOjE1ODA4NTczMzUsImV4cCI6MTU4MDk0MzczNX0.HjpImrYBtdXiBqAhz9_E7nU-MTfv7EOQeCIPdRwsMsY"
+  const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWJqZWN0IjoyLCJ1c2VybmFtZSI6ImRiIiwiaWF0IjoxNTgwOTMwMTE5LCJleHAiOjE1ODEwMTY1MTl9.9DtBtw0Ee0ROVwuQNlxdEMUPHDzRDc7p7UFYl5Th_pc"
 
   const wrongToken = "This is the wrong token"
 

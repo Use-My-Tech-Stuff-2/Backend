@@ -17,7 +17,7 @@ router.post('/register', (req, res) => {
     })
     .catch(error => {
       console.log(error)
-      res.status(500).json(error);
+      res.status(500).json({error: "incorrect credentials"});
     });
 });
 
@@ -67,7 +67,7 @@ router.get('/users/:id/items', restricted, (req, res) => {
     });
 });
 
-router.post('/users/:id/items', (req, res) => {
+router.post('/users/:id/items', restricted, (req, res) => {
   const id = req.params.id;
 
   req.body.user_id = req.params.id
