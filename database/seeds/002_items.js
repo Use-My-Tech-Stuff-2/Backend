@@ -12,7 +12,8 @@ exports.seed = function(knex) {
         availability: true,
         daily_rate: 20,
         condition: "Great",
-        location: 'LA'
+        location: 'LA',
+        imgs: 'https://images-na.ssl-images-amazon.com/images/I/81Qhp8Yt81L._AC_SX522_.jpg'
       },
       { id: 2, 
         item_name:'XXL Megaphone', 
@@ -21,7 +22,8 @@ exports.seed = function(knex) {
         availability: true,
         daily_rate: 15,
         condition: "It works",
-        location: 'LA'
+        location: 'LA',
+        imgs: 'https://images-na.ssl-images-amazon.com/images/I/51ClklVIA5L._AC_SX466_.jpg'
       }
       ]);
     });

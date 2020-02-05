@@ -83,6 +83,28 @@ router.post('/users/:id/items', (req, res) => {
     });
 });
 
+router.get('/user/:id', restricted, (req, res) => {
+  const id = req.params.id;
+  Users.findById(id)
+  .then(user => {
+    res.status(200).json(user)
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json({ message: "failed to get user"})
+  })
+})
+
+router.delete('/user/:id', restricted, (req, res) => {
+  Users.deleteUser(req.params.id)
+  .then(() =>{
+    res.status(200).json({message: `User ${req.body.username} deleted`})
+  })
+  .catch(error => {
+    res.status(500).json({ message: "Couldn't delete the user" })
+  })
+})
+
 
 
 function generateToken(user){

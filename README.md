@@ -12,6 +12,10 @@ Section Contents:
 - [Get item by ID](#Single-Item)
 - [Add Item](#Add-Item)
 - [Delete Item by ID from database](#Delete-Item)
+- [Add item by owner](#Add-item-by-owner)
+- [Get item by User](#Get-items-by-User)
+- [Get User by ID](#Get-User-by-ID)
+- [Delete user by ID](#Delete-User)
 
 
 # Dummy data
@@ -145,7 +149,9 @@ Will add an item to the database
         "availability": 1, //boolean
         "daily_rate": 75, //integer
         "condition": "Not a Scratch", //string
-        "location": "AZ" //string
+        "location": "AZ" //string,
+        "imgs":"" //string
+
 ```
 
 ## Delete item
@@ -175,6 +181,7 @@ Example of data that can be inputed:
         "daily_rate": 75, //integer
         "condition": "Not a Scratch", //string required
         "location": "AZ" //string required
+        "imgs": "" //string
 ```
 
 ## Get items by User
@@ -185,4 +192,21 @@ Example of data that can be inputed:
 
 Used to get all items assigned to specific owner
 
+
+## Get User by ID
+
+### Auth needed
+
+### /api/user/:id GET
+
+Gets the user by ID and it's credentials 
+
+
+## Delete User by ID
+
+### Auth needed
+
+### /api/user/:id DELETE
+
+Deletes user by ID
 
