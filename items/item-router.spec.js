@@ -144,4 +144,33 @@ describe('Items Router', () => {
         })
     })
   })
+
+  describe('DELETE Request to "/api/item/:id', () => {
+    it('Returns 200 on success', () => {
+      return request(server)
+        .delete('/api/item/1')
+        .set('Authorization', token)
+        .then(res => {
+          expect(res.status).toBe(200);
+        })
+    })
+
+    it('Returns 401 with wrong token', () => {
+      return request(server)
+        .delete('/api/item/1')
+        .set('Authorization', wrongToken)
+        .then(res => {
+          expect(res.status).toBe(401)
+        })
+    })
+
+    it('Expects a message with deleted ID', () => {
+      return request(server)
+        .delete('/api/item/1')
+        .set('Authorization', token)
+        .then(res => {
+          expect(res.text).toBe("{\"message\":\"Item with ID 1 deleted\"}")
+        })
+    })
+  })
 })

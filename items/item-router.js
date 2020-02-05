@@ -40,17 +40,12 @@ router.post('/item', restricted, (req, res) => {
   })
 })
 
-//TODO: Unhandled Rejection Error -> Check this out. Update still works
 router.put('/item/:id', restricted, (req, res) => {
   Users.updateItem(req.params.id, req.body)
-  .then((item) => { res.json(item)
-  .catch(error => {
-    res.status(500).json({ message: "Could not get items." });
-  });
-  })
-  .catch(error => {
-    res.status(500).json({ message: "Could not update items." });
-  });
+    .then((item) => { res.json(item) })
+    .catch(error => {
+      res.status(500).json({ message: "Could not update items." });
+    });
 });
 
 router.delete('/item/:id', restricted, (req, res) => {
