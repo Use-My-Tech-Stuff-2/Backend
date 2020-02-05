@@ -69,7 +69,8 @@ router.get('/users/:id/items', restricted, (req, res) => {
 
 router.post('/users/:id/items', (req, res) => {
   const id = req.params.id;
-  console.log(req.params.id)
+
+  req.body.user_id = req.params.id
 
   Users.addItemToUser(id, req.body)
     .then(newItem => {

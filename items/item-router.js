@@ -8,13 +8,13 @@ const restricted = require('../auth/restricted')
 
 router.get('/items', restricted, (req, res) => {
     Users.allItems()
-    .then(item => {
-      res.json(item)
+      .then(item => {
+        res.status(200).json(item)
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json({ message: "failed to get items"})
     })
-    .catch(err => {
-      console.log(err);
-      res.status(500).json({ message: "failed to get items"})
-})
 })
   
 router.get('/item/:id', restricted, (req, res) => {
