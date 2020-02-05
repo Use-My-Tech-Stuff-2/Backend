@@ -14,6 +14,7 @@ exports.up = function(knex) {
         item.integer('daily_rate');
         item.string('condition', 18).notNullable();
         item.string('location', 18).notNullable();
+        item.string('imgs', 256)
   
       })
 };

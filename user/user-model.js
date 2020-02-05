@@ -8,7 +8,8 @@ module.exports = {
   allItems,
   findItemById,
   findUserItems,
-  addItemToUser
+  addItemToUser,
+  deleteUser
 };
 
 function find() {
@@ -61,4 +62,8 @@ function addItemToUser(userId, payload){
     .insert(payload)
     .select("*")
     .where(userId, payload.user_id)
+}
+
+function deleteUser(id){
+  return findById(id).del(id)
 }
